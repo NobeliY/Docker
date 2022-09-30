@@ -1,0 +1,5 @@
+#! /bin/bash
+echo "Create db..."
+psql -U postgres -c "create database www;"
+echo "Load DB..."
+psql -U postgres --dbname=www < /var/www/html/asd.sql 
